@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wallet & Payments - STACKLY</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="sidebar">
+        <div class="logo-box position-relative">
+            <a href="index.html"><img src="images/logo-2.webp" alt="STACKLY"></a>
+            <i class="fas fa-times close-sidebar" id="closeSidebar"></i>
+        </div>
+        <ul class="dashboard-nav">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="dashboard-rides.html"><i class="fas fa-car-side"></i> My Rides</a></li>
+            <li class="active"><a href="dashboard-wallet.html"><i class="fas fa-wallet"></i> Wallet & Payments</a></li>
+            <li><a href="dashboard-statistics.html"><i class="fas fa-chart-line"></i> Statistics</a></li>
+            <li><a href="dashboard-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="dashboard-support.html"><i class="fas fa-life-ring"></i> Support</a></li>
+            <li class="mt-5"><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <main class="dashboard-main">
+        
+        <!-- Topbar -->
+        <header class="dashboard-topbar">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-bars mobile-menu-toggle" id="menuToggle"></i>
+                <a href="index.html" class="go-back-btn ms-2 ms-md-3 text-decoration-none">
+                    <i class="fas fa-arrow-left"></i> <span class="d-none d-sm-inline">Go Back</span>
+                </a>
+                <div class="search-box ms-lg-3 d-none d-md-block">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search rides, transactions...">
+                </div>
+            </div>
+            
+            <div class="topbar-actions">
+                <div class="notification-icon">
+                    <i class="far fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/resource/man3.webp" alt="User" style="object-fit: cover; object-position: top;">
+                    <div class="info d-none d-md-block">
+                        <h6>Alex Johnson</h6>
+                        <span>Premium Member</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2>Wallet & Payments</h2>
+                    <p>Manage your STACKLY balance and saved payment methods.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Balance & Top Up -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="wallet-card-block">
+                        <div class="balance-label">STACKLY Balance</div>
+                        <div class="balance-amount">$345.50</div>
+                        <div class="card-number">**** **** **** 8821</div>
+                        <div class="d-flex justify-content-between align-items-center mt-4 position-relative" style="z-index: 2;">
+                            <div>
+                                <div style="font-size: 12px; opacity: 0.7;">Auto-Reload</div>
+                                <div style="font-weight: 600;">Enabled</div>
+                            </div>
+                            <img src="images/icons/google-play-2.webp" alt="logo" style="height: 25px; filter: brightness(0) invert(1); opacity: 0.5;">
+                        </div>
+                    </div>
+
+                    <div class="dashboard-subpage-card">
+                        <div class="dashboard-subpage-title mb-4">Add Funds</div>
+                        <form action="#">
+                            <div class="form-group mb-3">
+                                <label class="mb-2 fw-bold text-muted" style="font-size: 14px;">Amount (USD)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0 border" style="border-radius: 8px 0 0 8px;">$</span>
+                                    <input type="number" class="form-control border-start-0 py-2" placeholder="0.00" value="50.00" style="border-left: none; box-shadow: none; border-radius: 0 8px 8px 0; font-weight: 600; font-size: 18px;">
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 mb-4">
+                                <button type="button" class="btn btn-outline-secondary w-100 py-2" style="border-radius: 8px;">$25</button>
+                                <button type="button" class="btn btn-outline-secondary w-100 py-2" style="border-radius: 8px; background: rgba(var(--theme-color1-rgb),0.1); border-color: var(--theme-color1); color: var(--theme-color-dark); font-weight: 600;">$50</button>
+                                <button type="button" class="btn btn-outline-secondary w-100 py-2" style="border-radius: 8px;">$100</button>
+                            </div>
+                            <button type="button" class="theme-btn btn-style-one hover-light w-100 py-3" style="border-radius: 8px;">Top Up Balance</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Payment Methods & History -->
+                <div class="col-lg-7 col-md-12">
+                    <div class="dashboard-subpage-card mb-4">
+                        <div class="dashboard-subpage-title mb-4">
+                            Payment Methods
+                            <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold" style="font-size: 14px;"><i class="fas fa-plus me-1"></i> Add New</button>
+                        </div>
+                        
+                        <div class="payment-method-item">
+                            <div class="info">
+                                <div class="icon text-primary"><i class="fab fa-cc-visa"></i></div>
+                                <div class="details">
+                                    <h6>Visa Ending in 4242</h6>
+                                    <span>Expires 12/28 • Default</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-outline-danger" style="border-radius: 5px;"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+
+                        <div class="payment-method-item">
+                            <div class="info">
+                                <div class="icon text-danger"><i class="fab fa-cc-mastercard"></i></div>
+                                <div class="details">
+                                    <h6>Mastercard Ending in 8891</h6>
+                                    <span>Expires 05/27</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-outline-danger" style="border-radius: 5px;"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                        
+                        <div class="payment-method-item">
+                            <div class="info">
+                                <div class="icon" style="color: #0070ba;"><i class="fab fa-cc-paypal"></i></div>
+                                <div class="details">
+                                    <h6>PayPal Account</h6>
+                                    <span>alex.j@example.com</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-outline-danger" style="border-radius: 5px;"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-subpage-card">
+                        <div class="dashboard-subpage-title mb-3">Recent Transactions</div>
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle">
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #f0f0f0;">
+                                        <td class="py-3">
+                                            <div class="d-flex align-items-center">
+                                                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(var(--theme-color1-rgb), 0.1); color: var(--theme-color1); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                                    <i class="fas fa-car"></i>
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-1" style="font-size: 15px;">Ride to JFK Airport</h6>
+                                                    <span class="text-muted" style="font-size: 12px;">12 Oct, 10:30 AM</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end fw-bold py-3 text-dark">-$65.00</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f0f0f0;">
+                                        <td class="py-3">
+                                            <div class="d-flex align-items-center">
+                                                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(46, 204, 113, 0.1); color: #2ecc71; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                                    <i class="fas fa-plus"></i>
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-1" style="font-size: 15px;">Wallet Top Up</h6>
+                                                    <span class="text-muted" style="font-size: 12px;">11 Oct, 09:15 AM (Visa 4242)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end fw-bold py-3 text-success">+$100.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3">
+                                            <div class="d-flex align-items-center">
+                                                <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(var(--theme-color1-rgb), 0.1); color: var(--theme-color1); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                                    <i class="fas fa-car"></i>
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-1" style="font-size: 15px;">Ride to 5th Avenue Mall</h6>
+                                                    <span class="text-muted" style="font-size: 12px;">10 Oct, 08:15 PM</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end fw-bold py-3 text-dark">-$18.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center mt-2">
+                                <a href="#" class="text-decoration-none fw-bold text-muted" style="font-size: 14px;">View All Transactions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sidebar Toggle for Mobile
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Close Sidebar on Mobile Cross Click
+        if (document.getElementById('closeSidebar')) {
+            document.getElementById('closeSidebar').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.remove('active');
+            });
+        }
+    </script>
+</body>
+

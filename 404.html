@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>404 - Page Not Found | STACKLY</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        .error-section {
+            padding: 150px 0;
+            text-align: center;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .error-content h1 {
+            font-size: 180px;
+            font-weight: 900;
+            color: var(--theme-color1);
+            line-height: 1em;
+            margin-bottom: 20px;
+            letter-spacing: -5px;
+        }
+        .error-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        .error-content p {
+            font-size: 18px;
+            color: #bbb;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .taxi-icon-err {
+            font-size: 100px;
+            color: var(--theme-color1);
+            margin-bottom: 40px;
+            display: block;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+    </style>
+</head>
+
+<body class="preloader-active">
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <h1 data-text="STACKLY">STACKLY</h1>
+        </div>
+
+        <!-- Main Header-->
+        <header class="main-header header-style-one">
+            <div class="header-lower">
+                <div class="auto-container">
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/logo-2.webp" alt="Logo"></a></div>
+                        </div>
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation">
+                                    <li class="dropdown"><a href="index.html">Home</a>
+                                        <ul>
+                                            <li><a href="index.html">Home 1</a></li>
+                                            <li><a href="index-2.html">Home 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="dashboard.html">Dashboard</a></li>
+                                    <li><a href="login.html" class="header-login-btn">Login <i class="fas fa-arrow-right"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="outer-box">
+                            <div class="mobile-nav-toggler"><span class="icon fas fa-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="index.html"><img src="images/logo-2.webp" alt="" title=""></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+                    <ul class="navigation clearfix"></ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Error Section -->
+        <section class="error-section">
+            <div class="auto-container">
+                <div class="error-content">
+                    <i class="fas fa-car taxi-icon-err"></i>
+                    <h1>404</h1>
+                    <h2>Oops! Route Not Found</h2>
+                    <p>It seems our driver took a wrong turn. The page you are looking for might have been moved or doesn't exist.</p>
+                    <a href="index.html" class="theme-btn btn-style-one"><span class="btn-title">Return Home</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer footer-style-two">
+            <div class="footer-bottom">
+                <div class="auto-container text-center">
+                    <div class="copyright-text">© 2026 STACKLY Taxi. All rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up - STACKLY Elite Cab Booking</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+    <div class="auth-page-wrapper">
+        <!-- Image Side -->
+        <div class="auth-image-side" style="background-image: url('images/background/3.webp');">
+            <div class="auth-image-content">
+                <a href="index.html"><img src="images/logo-2.webp" alt="STACKLY"></a>
+                <h2>Join the Elite</h2>
+                <p>Register today to unlock premium rides, dedicated support, and an unparalleled travel experience.</p>
+            </div>
+        </div>
+
+        <!-- Form Side -->
+        <div class="auth-form-side">
+            <div class="auth-form-container" style="max-width: 500px;">
+                <div class="d-flex align-items-center justify-content-between mb-4 d-lg-none">
+                     <a href="index.html"><img src="images/logo-2.webp" alt="STACKLY" style="max-height: 40px;"></a>
+                </div>
+                
+                <a href="index.html" class="text-decoration-none d-inline-block mb-4" style="color: var(--theme-color-dark); font-weight: 600;">
+                    <i class="fas fa-arrow-left me-2"></i> Go Back
+                </a>
+
+                <h3>Create an Account</h3>
+                <p>Start your premium journey with us today.</p>
+
+                <form action="dashboard.html" class="auth-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="Alex" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Johnson" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="alex@example.com" required>
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control pwd-input" placeholder="••••••••" required>
+                        <i class="far fa-eye-slash toggle-pwd" style="cursor: pointer;"></i>
+                    </div>
+
+                    <div class="auth-options mt-4 mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">
+                                I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="theme-btn btn-style-one w-100 auth-btn">Create Account</button>
+                    
+                    <div class="social-login">
+                        <p>Or register with</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="social-btn"><i class="fab fa-google text-danger fs-5"></i> Google</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="social-btn"><i class="fab fa-apple fs-5"></i> Apple</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="auth-bottom">
+                        Already have an account? <a href="login.html">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.toggle-pwd').addEventListener('click', function (e) {
+            const pwdInput = e.target.previousElementSibling;
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                e.target.classList.replace('fa-eye-slash', 'fa-eye');
+            } else {
+                pwdInput.type = 'password';
+                e.target.classList.replace('fa-eye', 'fa-eye-slash');
+            }
+        });
+    </script>
+</body>
+</html>
